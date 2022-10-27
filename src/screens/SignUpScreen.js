@@ -21,10 +21,15 @@ const SignUpScreen = () => {
   const onSignUpPressed = (data) => {
     navigation.navigate('home screen')
   }
+  const onHaveAccPressed = (data) => {
+    navigation.navigate('sign in')
+  }
   
   return (
    <ScrollView>
     <View style = {styles.root}>
+      <Text style={styles.text}>Create New </Text>
+      <Text style={styles.text}>Account</Text>
       <Image style = {styles.logo}source = {Logo} resizeMode={'contain'}/>
       <CustomInput
           name="email"
@@ -46,9 +51,18 @@ const SignUpScreen = () => {
               value: 6,
               message: '*password should me atleast 6 characters long',
             },
+            maxLength: {
+              value: 10,
+              message: '*password can be maximum 10 characters long',
+            },
           }}
         />
         <CustomButton  text={'signup'} onPress={handleSubmit(onSignUpPressed)} />
+        <CustomButton
+          text={'Already have an account? Login.'}
+          onPress={onHaveAccPressed}
+          type = "TERTIARY"
+        />
         
     </View>
     </ScrollView>
@@ -66,7 +80,7 @@ const styles = StyleSheet.create({
      
       width: '100%',
       maxWidth: 500,
-      height: 500,
+      height: 350,
     },
     text: {
       fontWeight: 'bold',

@@ -23,6 +23,7 @@ const CustomInput = ({
               onChangeText={onChange}
               onBlur={onBlur}
               placeholder={placeholder}
+              placeholderTextColor={'black'}
               style={styles.input}
               secureTextEntry={secureTextEntry}
             />
@@ -42,8 +43,8 @@ const styles = StyleSheet.create({
 
     borderColor: 'black',
     borderWidth: 2,
-    borderRadius: 8,
-    paddingHorizontal: 10,
+    borderRadius: 15,
+    paddingHorizontal: 20,
     width: '100%',
     marginVertical: 10,
   },

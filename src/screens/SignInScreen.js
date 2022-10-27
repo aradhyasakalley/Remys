@@ -31,6 +31,7 @@ const SignInScreen = () => {
   };
   return (
     <ScrollView>
+     
       <View style={styles.root}>
         <Image style={styles.logo} source={Logo} resizeMode={'contain'} />
 
@@ -59,8 +60,9 @@ const SignInScreen = () => {
 
         <CustomButton text={'Login'} onPress={handleSubmit(onSignInPressed)} />
         <CustomButton
-          text={'create new account'}
+          text={'Dont have an account? Create one.'}
           onPress={onCreateNewPressed}
+          type = "TERTIARY"
         />
       </View>
     </ScrollView>
@@ -81,9 +83,9 @@ const styles = StyleSheet.create({
   },
   text: {
     fontWeight: 'bold',
-    fontSize: 45,
+    fontSize: 35,
     alignItems: 'center',
-
+    paddingLeft:80,
     color: '#97cf8a',
   },
   text_new: {

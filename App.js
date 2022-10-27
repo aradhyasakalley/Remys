@@ -71,6 +71,7 @@ const App: () => Node = () => {
 
 const styles = StyleSheet.create({
   root:{
+    
     alignItems: 'center',
   },
   sectionContainer: {
