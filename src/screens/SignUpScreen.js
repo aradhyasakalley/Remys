@@ -1,44 +1,57 @@
-import { StyleSheet, Text, View ,Image,useWindowDimensions} from 'react-native'
+import { StyleSheet, Text, View ,Image,useWindowDimensions, ScrollView} from 'react-native'
 import React,{useState} from 'react'
 import Logo from '../../assets/images/rata.png'
 import CustomInput from '../components/CustomInput/CustomInput'
 import CustomButton from '../components/CustomButton/CustomButton'
 import { useNavigation } from '@react-navigation/native'
+import {useForm, Controller} from 'react-hook-form';
+const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 
 const SignUpScreen = () => {
-  const [email,setEmail] = useState('');
-  const [password,setPassword] = useState('');
+  
  
   const height = {useWindowDimensions};
   const navigation = useNavigation();
-  const onSignUpPressed = () => {
+  const {
+    control,
+    handleSubmit,
+    formState: {errors},
+  } = useForm();
+  const onSignUpPressed = (data) => {
     navigation.navigate('home screen')
   }
   
   return (
+   <ScrollView>
     <View style = {styles.root}>
       <Image style = {styles.logo}source = {Logo} resizeMode={'contain'}/>
       <CustomInput
-          
-          
+          name="email"
           placeholder="Email"
-          value={email}
-          setValue={setEmail}
-          
+          control={control}
+          rules={{
+            required: '*email required',
+            pattern: {value: reg, message: '*invalid email'},
+          }}
         />
         <CustomInput
-          
-          
+          name="password"
           placeholder="Password"
-          value={password}
-          setValue={setPassword}
-          secureTextEntry = {true}
-          
+          control={control}
+          secureTextEntry={true}
+          rules={{
+            required: '*password required',
+            minLength: {
+              value: 6,
+              message: '*password should me atleast 6 characters long',
+            },
+          }}
         />
-        <CustomButton  text={'signup'} onPress={onSignUpPressed} />
+        <CustomButton  text={'signup'} onPress={handleSubmit(onSignUpPressed)} />
         
     </View>
+    </ScrollView>
   )
 }
 
@@ -53,7 +66,7 @@ const styles = StyleSheet.create({
      
       width: '100%',
       maxWidth: 500,
-      height: 300,
+      height: 500,
     },
     text: {
       fontWeight: 'bold',
