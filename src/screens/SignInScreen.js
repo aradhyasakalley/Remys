@@ -24,7 +24,7 @@ const SignInScreen = () => {
   } = useForm();
   const onSignInPressed = data => {
     //validate
-    navigation.navigate('home screen');
+    navigation.navigate('bottom');
   };
   const onCreateNewPressed = () => {
     navigation.navigate('sign up');

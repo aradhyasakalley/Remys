@@ -19,7 +19,7 @@ const SignUpScreen = () => {
     formState: {errors},
   } = useForm();
   const onSignUpPressed = (data) => {
-    navigation.navigate('home screen')
+    navigation.navigate('sign in')
   }
   const onHaveAccPressed = (data) => {
     navigation.navigate('sign in')

@@ -28,6 +28,7 @@ import {
 import SignInScreen from './src/screens/SignInScreen';
 import SignUpScreen from './src/screens/SignUpScreen';
 import Navigation from './src/navigation';
+import BottomTab from './src/navigation/BottomTab';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
@@ -71,7 +72,7 @@ const App: () => Node = () => {
 
 const styles = StyleSheet.create({
   root:{
-    
+    color: 'black',
     alignItems: 'center',
   },
   sectionContainer: {
