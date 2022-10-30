@@ -17,13 +17,13 @@ const CustomInput = ({
       render={({field: {value, onChange, onBlur}, fieldState: {error}}) => (
         <>
           <View
-            style={[styles.container, {borderColor: error ? 'red' : 'black'}]}>
+            style={[styles.container, {borderColor: error ? 'red' : '#315e26'}]}>
             <TextInput
               value={value}
               onChangeText={onChange}
               onBlur={onBlur}
               placeholder={placeholder}
-              placeholderTextColor={'black'}
+              placeholderTextColor={'#315e26'}
               style={styles.input}
               secureTextEntry={secureTextEntry}
             />

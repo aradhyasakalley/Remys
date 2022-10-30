@@ -4,11 +4,19 @@ import React from 'react'
 const FavioratePage = () => {
   return (
     <View>
-      <Text>FavioratePage</Text>
+      <Text style = {styles.text} >Faviorates page</Text>
     </View>
   )
 }
 
 export default FavioratePage;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  text: {
+    fontWeight: 'bold',
+    fontSize: 35,
+    alignItems: 'center',
+    paddingLeft:80,
+    color: '#97cf8a',
+  },
+})

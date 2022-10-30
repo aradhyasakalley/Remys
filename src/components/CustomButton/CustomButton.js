@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   text_TERTIARY: {
-    color: 'grey'
+    color: '#7a9f79'
   },
 });
 

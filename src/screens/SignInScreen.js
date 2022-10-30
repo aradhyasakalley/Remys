@@ -13,6 +13,7 @@ import CustomInput from '../components/CustomInput/CustomInput';
 import CustomButton from '../components/CustomButton/CustomButton';
 import {useNavigation} from '@react-navigation/native';
 import {useForm, Controller} from 'react-hook-form';
+
 const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const SignInScreen = () => {
   const height = {useWindowDimensions};
@@ -31,8 +32,9 @@ const SignInScreen = () => {
   };
   return (
     <ScrollView>
-     
       <View style={styles.root}>
+        <Text style={styles.text}>Please Login to</Text>
+        <Text style={styles.text}>continue</Text>
         <Image style={styles.logo} source={Logo} resizeMode={'contain'} />
 
         <CustomInput
@@ -53,7 +55,7 @@ const SignInScreen = () => {
             required: '*password required',
             minLength: {
               value: 6,
-              message: '*password should me atleast 6 characters long',
+              message: '*password should be atleast 6 characters long',
             },
           }}
         />
@@ -62,7 +64,7 @@ const SignInScreen = () => {
         <CustomButton
           text={'Dont have an account? Create one.'}
           onPress={onCreateNewPressed}
-          type = "TERTIARY"
+          type="TERTIARY"
         />
       </View>
     </ScrollView>
@@ -78,16 +80,17 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: '100%',
-    maxWidth: 500,
+    maxWidth: 900,
     height: 400,
   },
   text: {
     fontWeight: 'bold',
-    fontSize: 35,
+    fontSize: 40,
     alignItems: 'center',
-    paddingLeft:80,
-    color: '#97cf8a',
+  
+    color: '#315e26',
   },
+
   text_new: {
     fontWeight: 'bold',
     fontSize: 45,

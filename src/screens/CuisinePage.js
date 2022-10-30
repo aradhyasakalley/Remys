@@ -4,11 +4,22 @@ import React from 'react'
 const CuisinePage = () => {
   return (
     <View>
-      <Text>CuisinePage</Text>
+      <Text  style={styles.text}>Cuisines page</Text>
     </View>
   )
 }
 
 export default CuisinePage;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  text: {
+    
+    fontWeight: 'bold',
+    fontSize: 35,
+    alignItems: 'center',
+    paddingLeft:80,
+    color: '#97cf8a',
+  },
+
+
+})

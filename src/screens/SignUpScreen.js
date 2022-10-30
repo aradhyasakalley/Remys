@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View ,Image,useWindowDimensions, ScrollView} from 'react-native'
 import React,{useState} from 'react'
-import Logo from '../../assets/images/rata.png'
+import Logo from '../../assets/images/signup.jpg'
 import CustomInput from '../components/CustomInput/CustomInput'
 import CustomButton from '../components/CustomButton/CustomButton'
 import { useNavigation } from '@react-navigation/native'
@@ -49,7 +49,7 @@ const SignUpScreen = () => {
             required: '*password required',
             minLength: {
               value: 6,
-              message: '*password should me atleast 6 characters long',
+              message: '*password should be atleast 6 characters long',
             },
             maxLength: {
               value: 10,
@@ -78,9 +78,10 @@ const styles = StyleSheet.create({
     },
     logo: {
      
-      width: '100%',
-      maxWidth: 500,
+      width: '80%',
+      maxWidth: 900,
       height: 350,
+      width:500
     },
     text: {
       fontWeight: 'bold',

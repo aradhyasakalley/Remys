@@ -72,6 +72,7 @@ const App: () => Node = () => {
 
 const styles = StyleSheet.create({
   root:{
+    backgroundColor:'#97cf8a',
     color: 'black',
     alignItems: 'center',
   },
