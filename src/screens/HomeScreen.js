@@ -1,26 +1,32 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {useContext} from 'react';
-import {AuthContext} from '../navigation/AuthProvider';
+import {AuthContext, AuthProvider} from '../navigation/AuthProvider';
 import CustomButton from '../components/CustomButton/CustomButton';
 
 const HomeScreen = () => {
   const {logout} = useContext(AuthContext);
   return (
-    <>
-      <Text style={styles.text}>Home Screen</Text>
-      <CustomButton 
+    <View style={styles.root} > 
+      <Text style={styles.root}>logged in </Text>
+      
+      <CustomButton
+          
          text={'logout'}
-         style={styles.container}
+         
          onPress={() => logout()}>
-        
       </CustomButton>
-    </>
+      </View>
   );
 };
 
 export default HomeScreen;
 
 const styles = StyleSheet.create({
+  root: {
+    justifyContent:'center',
+    
+    alignItems:'center'
+  },
   text: {
     fontWeight: 'bold',
     fontSize: 35,
@@ -29,6 +35,7 @@ const styles = StyleSheet.create({
     color: '#97cf8a',
   },
   container: {
+    color: '#97cf8a',
     alignItems:'center',
     padding: 10,
     marginTop: 10,

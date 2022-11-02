@@ -35,7 +35,7 @@ export const AuthProvider = ({children, navigation}) => {
               .signOut()
 
               .then(() => {
-                alert('User has Signed Out');
+                alert('Are you sure you want to sign out? ');
                 console.log(user);
                 setisSignedIn(false);
               });
