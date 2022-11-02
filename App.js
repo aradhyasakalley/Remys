@@ -29,7 +29,10 @@ import SignInScreen from './src/screens/SignInScreen';
 import SignUpScreen from './src/screens/SignUpScreen';
 import Navigation from './src/navigation';
 import BottomTab from './src/navigation/BottomTab';
-/*import Providers from './src/navigation/Providers';*/
+import AppStack from './src/navigation/AppStack';
+import Providers from './src/navigation/Providers';
+
+//import Providers from './src/navigation/Providers';
 
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
@@ -68,7 +71,7 @@ const App: () => Node = () => {
   };
 
   return (
-    <Navigation/>
+    <Providers/>
   );
 };
 

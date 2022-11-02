@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View ,Image,useWindowDimensions, ScrollView,TextInput,TouchableOpacity} from 'react-native'
-import React,{useState} from 'react'
+import { StyleSheet, Text, View ,Image,useWindowDimensions, ScrollView,TextInput,TouchableOpacity,} from 'react-native'
+import React,{useContext, useState} from 'react'
 import Logo from '../../assets/images/signup.jpg'
 import CustomInput from '../components/CustomInput/CustomInput'
 import CustomButton from '../components/CustomButton/CustomButton'
 import { useNavigation } from '@react-navigation/native'
 import {useForm, Controller} from 'react-hook-form';
-
+import { AuthContext } from '../navigation/AuthProvider'
 
 
 const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -15,17 +15,21 @@ const regDob = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?
 
 const SignUpScreen = () => {
   
- 
+  const {register} = useContext(AuthContext);
   const height = {useWindowDimensions};
   const navigation = useNavigation();
+  // const [email,setEmail] = useState('');
+  // const [password,setPassword] = useState('');
   const {
     control,
     handleSubmit,
     formState: {errors},
   } = useForm();
   const onSignUpPressed = (data) => {
-    navigation.navigate('sign in');
-   
+    const { email,password} = data;
+    //navigation.navigate('sign in');
+    register(email,password);
+    console.log(email,password);
   }
   const onHaveAccPressed = (data) => {
     navigation.navigate('sign in')
@@ -40,17 +44,19 @@ const SignUpScreen = () => {
       <CustomInput
           name="email"
           placeholder="Email"
+          
+          onChange={value => setEmail(value)}  
           control={control}
           rules={{
             required: '*email required',
             pattern: {value: reg, message: '*invalid email'},
           }}
         />
-        
+      
         <CustomInput
           name="password"
           placeholder="Password"
-          
+          onChange={value => setPassword(value)} 
           control={control}
           secureTextEntry={true}
           rules={{
@@ -65,16 +71,19 @@ const SignUpScreen = () => {
             },
           }}
         />
+      
         <CustomInput
           name="Phone"
           placeholder="Phone Number"
           control={control}
+          keyboardType='numeric'
           rules={{
             required: '*Phone Number required',
             pattern: {value: regPhone, message: '*invalid Phone Number'},
           }}
         />
         <CustomInput
+          
           name="dob"
           placeholder="Date of Birth"
           control={control}
@@ -82,6 +91,7 @@ const SignUpScreen = () => {
           rules={{
             required: '*Date of birth required',
             pattern: {value: regDob, message: '*invalid Date of birth'},
+            
           }}
         />
         
@@ -110,7 +120,8 @@ const styles = StyleSheet.create({
       width: '80%',
       maxWidth: 900,
       height: 250,
-      width:500
+      width:800,
+      paddingBottom:90,
     },
     text: {
       fontWeight: 'bold',

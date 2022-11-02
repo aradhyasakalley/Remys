@@ -1,15 +1,13 @@
-/*import React from 'react'
-import AuthRoute from './AuthRoute';
+import React from 'react'
+import Routes from './Routes';
 import { AuthProvider } from './AuthProvider'
-
 
 function Providers() {
     return (
        <AuthProvider>
-           <AuthRoute/>
+           <Routes/>
        </AuthProvider>
     )
 }
 
 export default Providers;
-*/
