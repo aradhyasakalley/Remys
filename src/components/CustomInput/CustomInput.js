@@ -2,6 +2,7 @@ import {StyleSheet, Text, TextInput, View, sec} from 'react-native';
 import React from 'react';
 import {Controller} from 'react-hook-form';
 
+
 const CustomInput = ({
   control,
   name,
@@ -17,7 +18,10 @@ const CustomInput = ({
       render={({field: {value, onChange, onBlur}, fieldState: {error}}) => (
         <>
           <View
-            style={[styles.container, {borderColor: error ? 'red' : '#315e26'}]}>
+            style={[
+              styles.container,
+              {borderColor: error ? 'red' : '#315e26'},
+            ]}>
             <TextInput
               value={value}
               onChangeText={onChange}
@@ -28,7 +32,11 @@ const CustomInput = ({
               secureTextEntry={secureTextEntry}
             />
           </View>
-          {error && <Text style = {{color: 'red' ,alignSelf:'stretch'}}>{error.message || 'Error'}</Text>}
+          {error && (
+            <Text style={{color: 'red', alignSelf: 'stretch'}}>
+              {error.message || 'Error'}
+            </Text>
+          )}
         </>
       )}
     />

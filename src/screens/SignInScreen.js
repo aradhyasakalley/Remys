@@ -6,6 +6,7 @@ import {
   useWindowDimensions,
   TextInput,
   ScrollView,
+  
 } from 'react-native';
 import React, {useState} from 'react';
 import Logo from '../../assets/images/logo1.png';
@@ -13,6 +14,8 @@ import CustomInput from '../components/CustomInput/CustomInput';
 import CustomButton from '../components/CustomButton/CustomButton';
 import {useNavigation} from '@react-navigation/native';
 import {useForm, Controller} from 'react-hook-form';
+
+
 
 const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const SignInScreen = () => {
@@ -25,7 +28,9 @@ const SignInScreen = () => {
   } = useForm();
   const onSignInPressed = data => {
     //validate
+    
     navigation.navigate('bottom');
+
   };
   const onCreateNewPressed = () => {
     navigation.navigate('sign up');
@@ -87,7 +92,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 40,
     alignItems: 'center',
-  
+
     color: '#315e26',
   },
 

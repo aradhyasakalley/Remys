@@ -8,6 +8,7 @@ import HomeScreen from '../screens/HomeScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
+
 const Tab = createBottomTabNavigator();
 
 const BottomTab = () => {

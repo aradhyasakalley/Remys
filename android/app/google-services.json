@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "645032777616",
+    "project_id": "remee-authentication",
+    "storage_bucket": "remee-authentication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645032777616:android:20a8df7edc8185d4e5c515",
+        "android_client_info": {
+          "package_name": "com.remee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645032777616-fsutikabs1u5evsnfko6tg5qt8uabo57.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtBvtVZCZO54Qm_B8cYW5NEiPyLU6CPj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645032777616-fsutikabs1u5evsnfko6tg5qt8uabo57.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
