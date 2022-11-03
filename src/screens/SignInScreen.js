@@ -9,13 +9,14 @@ import {
   ImageBackground,
 } from 'react-native';
 import React, {useState, useContext} from 'react';
-import Logo from '../../assets/images/logo1.png';
+import Logo from '../../assets/images/signinpagelogo.png';
 import CustomInput from '../components/CustomInput/CustomInput';
 import CustomButton from '../components/CustomButton/CustomButton';
 import SocialSignInButtons from '../components/SocialButton.js/SocialSignInButtons';
 import {useNavigation} from '@react-navigation/native';
 import {useForm, Controller} from 'react-hook-form';
 import {AuthContext} from '../navigation/AuthProvider';
+import SocialButton1 from '../components/GoogleButton/SocialButton1';
 
 const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const SignInScreen = () => {
@@ -44,9 +45,10 @@ const SignInScreen = () => {
   return (
     <ScrollView style={styles.root}>
       <View style={styles.root}>
-       
-         
-        <Text style={styles.text}>Welcome to Remy </Text>
+        <Text style={styles.text}>
+          Welcome to {''}
+          <Text style={styles.link}>Remy</Text>{' '}
+        </Text>
 
         <Image style={styles.logo} source={Logo} resizeMode={'contain'} />
 
@@ -74,13 +76,29 @@ const SignInScreen = () => {
         />
         {/* <CustomButton text={'Sign in with google'} onPress={onSignInPressed}/>  */}
         <CustomButton text={'Login'} onPress={handleSubmit(onSignInPressed)} />
+
+        {/* <Text style={styles.textor}>--------------------      or      --------------------</Text> */}
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
+          <View>
+            <Text style={{width: 50, textAlign: 'center'}}>or</Text>
+          </View>
+          <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
+        </View>
         <SocialSignInButtons />
-        <CustomButton
+
+        <Text style={styles.text2}>
+          Dont have an account?{' '}
+          <Text style={styles.link} onPress={onCreateNewPressed}>
+            Create one
+          </Text>{' '}
+        </Text>
+
+        {/* <CustomButton
           text={'Dont have an account? Create one.'}
           onPress={onCreateNewPressed}
           type="TERTIARY"
-        />
-        
+        /> */}
       </View>
     </ScrollView>
   );
@@ -90,24 +108,14 @@ export default SignInScreen;
 
 const styles = StyleSheet.create({
   root: {
-    backgroundColor:'#f1faf0',
-    padding:20,
+    backgroundColor: '#f1faf0',
+    padding: 20,
   },
-  image: {
-    flex: 1,
-    justifyContent: 'center',
-  },
+
   logo: {
     width: '100%',
     maxWidth: 900,
-    height: 400,
-  },
-  text: {
-    
-    fontSize: 35,
-    fontFamily:'Lobster-Regular',
-    textAlign:'center',
-    color: '#419834',
+    height: 300,
   },
 
   text_new: {
@@ -117,8 +125,34 @@ const styles = StyleSheet.create({
 
     color: '#315e26',
   },
+  textor: {
+    textAlign: 'center',
+    color: '#315e26',
+  },
+  text: {
+    color: '#021717',
+    marginVertical: 10,
+    textAlign: 'center',
+    fontSize: 30,
 
- 
+    textShadowColor: '#145236',
+    textShadowOffset: {width: -2, height: 0},
+    textShadowRadius: 5,
+    
+    fontWeight: '600',
+  },
+  link: {
+    color: '#66c559',
+    
+    textAlign: 'center',
+    fontWeight: '800',
+  },
+  text2: {
+    color: 'gray',
+    marginVertical: 10,
+    textAlign: 'center',
+    fontSize: 15,
+  },
 });
 
 /*const [email,setEmail] = useState('');

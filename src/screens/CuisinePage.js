@@ -3,7 +3,7 @@ import React from 'react'
 
 const CuisinePage = () => {
   return (
-    <View>
+    <View  style={styles.root} >
       <Text  style={styles.text}>Cuisines page</Text>
     </View>
   )
@@ -16,10 +16,13 @@ const styles = StyleSheet.create({
     
     fontWeight: 'bold',
     fontSize: 35,
-    alignItems: 'center',
-    paddingLeft:80,
+    textAlign:'center',
     color: '#97cf8a',
   },
-
+  root: {
+    backgroundColor:'#FDFDFF',
+    padding:20,
+  },
+   
 
 })

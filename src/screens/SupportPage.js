@@ -3,7 +3,7 @@ import React from 'react'
 
 const SupportPage = () => {
   return (
-    <View>
+    <View style={styles.root}  >
       <Text style={styles.text}>Support page</Text>
     </View>
   )
@@ -15,8 +15,11 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: 'bold',
     fontSize: 35,
-    alignItems: 'center',
-    paddingLeft:80,
+    textAlign:'center',
     color: '#97cf8a',
+  },
+  root: {
+    backgroundColor:'#FDFDFF',
+    padding:20,
   },
 })

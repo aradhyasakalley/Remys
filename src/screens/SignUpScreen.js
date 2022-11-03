@@ -41,13 +41,22 @@ const SignUpScreen = () => {
   const onHaveAccPressed = data => {
     navigation.navigate('sign in');
   };
+  const onTermsOfUsePressed = () => {
+    console.warn('onTermsOfUsePressed');
+  };
+
+  const onPrivacyPressed = () => {
+    console.warn('onPrivacyPressed');
+  };
 
   return (
     <ScrollView style={styles.root}>
       <View style={styles.root}>
-        <Text style={styles.text}>Create a new account</Text>
-        
-        <Image style={styles.logo} source={Logo} resizeMode={'contain'} />
+        <Text style={styles.text2}>
+          Create a New <Text style={styles.link2}>Account</Text>{' '}
+        </Text>
+       
+        {/* <Image style={styles.logo} source={Logo} resizeMode={'contain'} /> */}
         <CustomInput
           name="email"
           placeholder="Email"
@@ -89,7 +98,7 @@ const SignUpScreen = () => {
             pattern: {value: regPhone, message: '*invalid Phone Number'},
           }}
         />
-        {/* <CustomInput
+        <CustomInput
           name="dob"
           placeholder="Date of Birth"
           control={control}
@@ -98,14 +107,47 @@ const SignUpScreen = () => {
             required: '*Date of birth required',
             pattern: {value: regDob, message: '*invalid Date of birth'},
           }}
-        /> */}
+        />
 
-        <CustomButton text={'signup'} onPress={handleSubmit(onSignUpPressed)} />
         <CustomButton
+          text={'Sign Up'}
+          onPress={handleSubmit(onSignUpPressed)}
+        />
+        <Text style={styles.text}>
+          By registering, you confirm that you accept our{' '}
+          <Text style={styles.link} onPress={onTermsOfUsePressed}>
+            Terms of Use
+          </Text>{' '}
+          and{' '}
+          <Text style={styles.link} onPress={onPrivacyPressed}>
+            Privacy Policy
+          </Text>
+        </Text>
+         
+
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
+          <View>
+            <Text style={{width: 50, textAlign: 'center'}}>or</Text>
+          </View>
+          <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
+        </View>
+        
+        <Text style={styles.text3}>
+          Already have an account?{' '}
+          <Text style={styles.link} onPress={onHaveAccPressed}>
+            Login
+          </Text>{' '}
+          
+          
+        </Text>
+
+
+        {/* <CustomButton
           text={'Already have an account? Login.'}
           onPress={onHaveAccPressed}
           type="TERTIARY"
-        />
+        /> */}
       </View>
     </ScrollView>
   );
@@ -145,8 +187,17 @@ export default SignUpScreen;
 
 const styles = StyleSheet.create({
   root: {
-    backgroundColor:'#f1faf0',
-    padding:20,
+    backgroundColor: '#f1faf0',
+    padding: 20,
+    marginTop:20
+  },
+  text: {
+    color: 'gray',
+    marginVertical: 10,
+    textAlign:'center'
+  },
+  link: {
+    color: '#2fa027',
   },
   image: {
     flex: 1,
@@ -157,11 +208,10 @@ const styles = StyleSheet.create({
     maxWidth: 900,
     height: 300,
   },
-  text: {
-  
+  textheader: {
     fontSize: 40,
-    fontFamily:'Lobster-Regular',
-    textAlign:'center',
+    fontFamily: 'Lobster-Regular',
+    textAlign: 'center',
     color: '#419834',
   },
 
@@ -172,6 +222,29 @@ const styles = StyleSheet.create({
 
     color: '#315e26',
   },
-
- 
+  text2: {
+    color: '#021717',
+    marginVertical: 10,
+    textAlign: 'center',
+    fontSize: 40,
+    textShadowColor: 'black',
+    textShadowOffset: {width: -2, height: 0},
+    textShadowRadius: 5,
+  },
+  link2: {
+    color: '#2fa027',
+    textAlign: 'center',
+    textShadowColor: 'green',
+    textShadowOffset: {width: -2, height: 0},
+    textShadowRadius: 5,
+  },
+  text3: {
+    color: 'black',
+    marginVertical: 10,
+    textAlign:'center',
+    fontSize:15
+  },
+  link3: {
+    color: '#1a5615',
+  },
 });

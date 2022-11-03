@@ -76,14 +76,25 @@ const styles = StyleSheet.create({
   },
 
   container_PRIMARY: {
-    backgroundColor: '#429c36',
+    backgroundColor: '#93d68a',
     borderRadius:20,
+    shadowColor: '#571e22',
+    shadowOpacity: 0.8,
+    elevation: 6,
+    shadowRadius: 15 ,
+    shadowOffset : { width: 1, height: 13},
   },
 
   container_SECONDARY: {
-    borderColor: '#3B71F3',
+    borderColor: '#d4e3fc',
     borderWidth: 2,
     borderRadius:20,
+    shadowColor: '#bb6411',
+    shadowOpacity: 0.8,
+    elevation: 6,
+    shadowRadius: 15 ,
+    shadowOffset : { width: 1, height: 13},
+    
   },
 
   container_TERTIARY: {
@@ -92,7 +103,7 @@ const styles = StyleSheet.create({
 
   text: {
     fontWeight: 'bold',
-    color: 'white',
+    color: '#33792a',
   },
 
   text_SECONDARY: {

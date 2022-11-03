@@ -15,7 +15,7 @@ const BottomTab = () => {
   return (
   
     <Tab.Navigator
-    
+      
       screenOptions={({route}) => ({
         tabBarStyle: { height: 50 },
         tabBarIcon: ({focused, color, size}) => {
@@ -95,6 +95,24 @@ const styles = StyleSheet.create({
       backgroundColor: 'transparent',
       elevation: 30
     },
+    tabBarStyle: {
+    shadowOffset: {
+        width: 0,
+        height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.0,
+    elevation: 24,
+    borderTopLeftRadius: 21,
+    borderTopRightRadius: 21,
+    backgroundColor: '#fff',
+    position: 'absolute',
+    bottom: 0,
+    padding: 10,
+    width: '100%',
+    height: 84,
+    zIndex: 0,
+},
   
 });
 

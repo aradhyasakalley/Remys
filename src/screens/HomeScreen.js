@@ -7,8 +7,9 @@ const HomeScreen = () => {
   const {logout} = useContext(AuthContext);
   return (
     <View style={styles.root}>
+      <Text style = {styles.text} >Home Screen</Text>
       <Text style={styles.root}>logged in </Text>
-      <CustomButton text={'logout'} onPress={() => logout()}></CustomButton>
+      <CustomButton text={'Log out'} onPress={() => logout()}></CustomButton>
     </View>
   );
 };
@@ -19,6 +20,14 @@ const styles = StyleSheet.create({
   root: {
     backgroundColor:'#FDFDFF',
     padding:20,
+    textAlign:'center'
+  },
+  text: {
+    fontWeight: 'bold',
+    fontSize: 35,
+    textAlign:'center',
+    
+    color: '#97cf8a',
   },
   // text: {
   //   fontWeight: 'bold',

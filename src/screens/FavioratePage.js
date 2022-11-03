@@ -3,8 +3,8 @@ import React from 'react'
 
 const FavioratePage = () => {
   return (
-    <View>
-      <Text style = {styles.text} >Faviorates page</Text>
+    <View style={styles.root}  >
+      <Text style = {styles.text} >favorites page</Text>
     </View>
   )
 }
@@ -15,8 +15,12 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: 'bold',
     fontSize: 35,
-    alignItems: 'center',
-    paddingLeft:80,
+    textAlign:'center',
     color: '#97cf8a',
   },
+  root: {
+    backgroundColor:'#FDFDFF',
+    padding:20,
+  },
+
 })
