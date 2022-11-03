@@ -20,10 +20,7 @@ const AppStack = () => {
         {/* <Stack.Screen  name = 'sign in' component={SignInScreen}   />
         <Stack.Screen  name = 'sign up' component={SignUpScreen}   /> */}
         <Stack.Screen  name = 'bottom' component={BottomTab}   />
-
-        
       </Stack.Navigator>
-  
   )
 }
 

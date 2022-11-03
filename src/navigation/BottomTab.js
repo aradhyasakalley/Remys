@@ -17,7 +17,7 @@ const BottomTab = () => {
     <Tab.Navigator
     
       screenOptions={({route}) => ({
-        tabBarStyle: { height: 60 },
+        tabBarStyle: { height: 50 },
         tabBarIcon: ({focused, color, size}) => {
           let iconName;
 
@@ -36,9 +36,9 @@ const BottomTab = () => {
           }
 
           // You can return any component that you like here!
-          return <Ionicons name={iconName} size={35} color={color} />;
+          return <Ionicons name={iconName} size={30} color={color} />;
         },
-        tabBarActiveTintColor: '#315e26',
+        tabBarActiveTintColor: '#449f37',
         tabBarInactiveTintColor: 'gray',
         
         headerShown:false,

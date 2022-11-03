@@ -50,14 +50,14 @@ export default CustomInput;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#f4f0ec',
+    backgroundColor: '#f5fbf4',
 
     borderColor: 'black',
     borderWidth: 2,
     borderRadius: 15,
     paddingHorizontal: 20,
     width: '100%',
-    marginVertical: 10,
+    marginVertical: 5,
   },
   input: {
     color: 'black',

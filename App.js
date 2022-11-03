@@ -71,14 +71,17 @@ const App: () => Node = () => {
   };
 
   return (
-    <Providers/>
+   
+     <Providers />
+  
   );
 };
 
 const styles = StyleSheet.create({
   root:{
-    backgroundColor:'#97cf8a',
-    color: 'black',
+   
+    backgroundColor:'#b1dd9e',
+    
     alignItems: 'center',
   },
   sectionContainer: {

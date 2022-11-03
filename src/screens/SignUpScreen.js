@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React, {useContext, useState} from 'react';
-import Logo from '../../assets/images/signup.jpg';
+import Logo from '../../assets/images/image2.png';
 import CustomInput from '../components/CustomInput/CustomInput';
 import CustomButton from '../components/CustomButton/CustomButton';
 import {useNavigation} from '@react-navigation/native';
@@ -43,10 +43,10 @@ const SignUpScreen = () => {
   };
 
   return (
-    <ScrollView>
+    <ScrollView style={styles.root}>
       <View style={styles.root}>
-        <Text style={styles.text}>Create New </Text>
-        <Text style={styles.text}>Account</Text>
+        <Text style={styles.text}>Create a new account</Text>
+        
         <Image style={styles.logo} source={Logo} resizeMode={'contain'} />
         <CustomInput
           name="email"
@@ -89,7 +89,7 @@ const SignUpScreen = () => {
             pattern: {value: regPhone, message: '*invalid Phone Number'},
           }}
         />
-        <CustomInput
+        {/* <CustomInput
           name="dob"
           placeholder="Date of Birth"
           control={control}
@@ -98,7 +98,7 @@ const SignUpScreen = () => {
             required: '*Date of birth required',
             pattern: {value: regDob, message: '*invalid Date of birth'},
           }}
-        />
+        /> */}
 
         <CustomButton text={'signup'} onPress={handleSubmit(onSignUpPressed)} />
         <CustomButton
@@ -113,25 +113,58 @@ const SignUpScreen = () => {
 
 export default SignUpScreen;
 
+// const styles = StyleSheet.create({
+//   root: {
+//     backgroundColor:'#acd1af',
+//     alignContent:'center',
+//     padding: 35,
+//   },
+//   logo: {
+//     alignContent:'center',
+//     width: '80%',
+//     maxWidth: 900,
+//     height: 300,
+//     width: 800,
+//     paddingBottom: 100,
+//   },
+//   text: {
+//     fontWeight: 'bold',
+//     fontSize: 40,
+//     textAlign:'center',
+
+//     color: '#97cf8a',
+//   },
+//   text_new: {
+//     fontWeight: 'bold',
+//     fontSize: 45,
+//     alignItems: 'center',
+
+//     color: '#315e26',
+//   },
+// });
+
 const styles = StyleSheet.create({
   root: {
-    alignItems: 'center',
-    padding: 40,
+    backgroundColor:'#f1faf0',
+    padding:20,
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
   },
   logo: {
-    width: '80%',
+    width: '100%',
     maxWidth: 900,
-    height: 250,
-    width: 800,
-    paddingBottom: 90,
+    height: 300,
   },
   text: {
-    fontWeight: 'bold',
+  
     fontSize: 40,
-    alignItems: 'center',
-
-    color: '#97cf8a',
+    fontFamily:'Lobster-Regular',
+    textAlign:'center',
+    color: '#419834',
   },
+
   text_new: {
     fontWeight: 'bold',
     fontSize: 45,
@@ -139,4 +172,6 @@ const styles = StyleSheet.create({
 
     color: '#315e26',
   },
+
+ 
 });
