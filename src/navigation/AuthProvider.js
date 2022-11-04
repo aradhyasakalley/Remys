@@ -2,7 +2,7 @@ import React, {useState, createContext} from 'react';
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-community/google-signin';
 export const AuthContext = createContext();
-
+import { ToastAndroid } from 'react-native';
 export const AuthProvider = ({children, navigation}) => {
   const [user, setUser] = useState(null);
   const [isSignedIn, setisSignedIn] = useState(false);
@@ -18,6 +18,7 @@ export const AuthProvider = ({children, navigation}) => {
           try {
             await auth().signInWithEmailAndPassword(email, password);
             setisSignedIn(true);
+            ToastAndroid.showWithGravity('singned in' ,ToastAndroid.SHORT,ToastAndroid.CENTER)
           } catch (e) {
             console.log(e);
           }
@@ -35,7 +36,7 @@ export const AuthProvider = ({children, navigation}) => {
               .signOut()
 
               .then(() => {
-                alert('user has signed out!');
+                ToastAndroid.showWithGravity('user has signed out',ToastAndroid.SHORT,ToastAndroid.CENTER)
                 console.log(user);
                 setisSignedIn(false);
               });
