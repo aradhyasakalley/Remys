@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "645032777616-eb5loot949aolpclr64gelf8bft12sm8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.remee",
+            "certificate_hash": "09aaceead4f2d839373a721bb0e2a69ab6a01ace"
+          }
+        },
+        {
           "client_id": "645032777616-fsutikabs1u5evsnfko6tg5qt8uabo57.apps.googleusercontent.com",
           "client_type": 3
         }

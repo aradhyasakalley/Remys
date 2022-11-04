@@ -9,7 +9,7 @@ import {
   ImageBackground,
 } from 'react-native';
 import React, {useState, useContext} from 'react';
-import Logo from '../../assets/images/signinpagelogo.png';
+import Logo from '../../assets/images/signinscreenlogo.png';
 import CustomInput from '../components/CustomInput/CustomInput';
 import CustomButton from '../components/CustomButton/CustomButton';
 import SocialSignInButtons from '../components/SocialButton.js/SocialSignInButtons';
@@ -17,7 +17,7 @@ import {useNavigation} from '@react-navigation/native';
 import {useForm, Controller} from 'react-hook-form';
 import {AuthContext} from '../navigation/AuthProvider';
 import SocialButton1 from '../components/GoogleButton/SocialButton1';
-
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
 const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const SignInScreen = () => {
   const {login, googleLogin} = useContext(AuthContext);
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
   logo: {
     width: '100%',
     maxWidth: 900,
-    height: 300,
+    height: 350,
   },
 
   text_new: {
@@ -134,13 +134,13 @@ const styles = StyleSheet.create({
     color: '#021717',
     marginVertical: 10,
     textAlign: 'center',
-    fontSize: 30,
-
+    fontSize: 40,
+    fontFamily:'Lobster-Regular',
     textShadowColor: '#145236',
     textShadowOffset: {width: -2, height: 0},
     textShadowRadius: 5,
     
-    fontWeight: '600',
+    // fontWeight: '600',
   },
   link: {
     color: '#66c559',

@@ -2,12 +2,15 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import CustomButton from '../CustomButton/CustomButton';
 import FontAwesome from 'react-native-vector-icons/dist/FontAwesome';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
 const SocialSignInButtons = () => {
   const onSignInFacebook = () => {
     console.warn('onSignInFacebook');
   };
 
   const onSignInGoogle = () => {
+    const {email, password} = data;
+    googleLogin(email, password);
     console.warn('onSignInGoogle');
   };
 
