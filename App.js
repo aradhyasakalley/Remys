@@ -32,7 +32,10 @@ import BottomTab from './src/navigation/BottomTab';
 import AppStack from './src/navigation/AppStack';
 import Providers from './src/navigation/Providers';
 
-//import Providers from './src/navigation/Providers';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import Sample from './src/screens/Sample';
+import HookEffect from './src/screens/HookEffect';
+import HookEffect2 from './HookEffect2';
 
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
@@ -64,24 +67,23 @@ const Section = ({children, title}): Node => {
 };
 
 const App: () => Node = () => {
+  // useEffect(() => {
+  //   GoogleSignin.configure({
+  //     webClientId:
+  //       '645032777616-fsutikabs1u5evsnfko6tg5qt8uabo57.apps.googleusercontent.com',
+  //   });
+  // }, []);
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return (
-   
-     <Providers />
-  
-  );
+  return <Providers/>;
 };
 
 const styles = StyleSheet.create({
-  root:{
-   
-    backgroundColor:'#b1dd9e',
-    
+  root: {
     alignItems: 'center',
   },
   sectionContainer: {

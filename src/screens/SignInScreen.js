@@ -18,6 +18,7 @@ import {useForm, Controller} from 'react-hook-form';
 import {AuthContext} from '../navigation/AuthProvider';
 import SocialButton1 from '../components/GoogleButton/SocialButton1';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
+
 const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const SignInScreen = () => {
   const {login, googleLogin} = useContext(AuthContext);
@@ -39,9 +40,9 @@ const SignInScreen = () => {
   const onCreateNewPressed = () => {
     navigation.navigate('sign up');
   };
-  const signInGooglePressed = () => {
-    const {email, password} = data;
-    googleLogin(email, password);
+  const onGooglePressed = () => {
+    
+    googleLogin();
   };
   return (
     <ScrollView style={styles.root}>
@@ -77,16 +78,27 @@ const SignInScreen = () => {
         />
         {/* <CustomButton text={'Sign in with google'} onPress={onSignInPressed}/>  */}
         <CustomButton text={'Login'} onPress={handleSubmit(onSignInPressed)} />
-
+        {/* <CustomButton text={'google'} onPress={onGooglePressed} /> */}
         {/* <Text style={styles.textor}>--------------------      or      --------------------</Text> */}
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
           <View>
-            <Text style={{width: 50, textAlign: 'center',color:'black'}}>or</Text>
+            <Text style={{width: 50, textAlign: 'center', color: 'black'}}>
+              or
+            </Text>
           </View>
           <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
         </View>
-        <SocialSignInButtons />
+        <SocialSignInButtons
+          onPress={onGooglePressed}
+        />
+        {/* <SocialSignInButtons
+          buttonTitle="Sign In with Google"
+          btnType="google
+          color="#4285F4"
+          backgroundColor="#d4e3fc"
+          onPress={() => googleLogin()}
+        /> */}
 
         <Text style={styles.text2}>
           Dont have an account?{' '}
@@ -135,21 +147,21 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     textAlign: 'center',
     fontSize: 40,
-    fontFamily:'Lobster-Regular',
+    fontFamily: 'Lobster-Regular',
     textShadowColor: '#145236',
     textShadowOffset: {width: -2, height: 0},
     textShadowRadius: 5,
-    
+
     // fontWeight: '600',
   },
   link: {
     color: '#66c559',
-    
+
     textAlign: 'center',
     fontWeight: '800',
   },
   text2: {
-    color: 'gray',
+    color: 'black',
     marginVertical: 10,
     textAlign: 'center',
     fontSize: 15,

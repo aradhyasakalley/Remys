@@ -12,10 +12,11 @@
   "dependencies": {
     "@react-native-firebase/app": "^16.4.0",
     "@react-native-firebase/auth": "^16.4.0",
-    "@react-native-google-signin/google-signin": "^8.1.0",
+    "@react-native-google-signin/google-signin": "^8.2.1",
     "@react-navigation/bottom-tabs": "^6.4.0",
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/native-stack": "^6.9.1",
+    "native-base": "^2.15.2",
     "react": "18.1.0",
     "react-hook-form": "^7.38.0",
     "react-native": "0.70.4",

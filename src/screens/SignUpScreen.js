@@ -194,7 +194,8 @@ const styles = StyleSheet.create({
   text: {
     color: 'gray',
     marginVertical: 10,
-    textAlign:'center'
+    textAlign:'center',
+    
   },
   link: {
     color: '#2fa027',
@@ -226,7 +227,8 @@ const styles = StyleSheet.create({
     color: '#021717',
     marginVertical: 10,
     textAlign: 'center',
-    fontSize: 40,
+    fontSize: 50,
+    fontFamily:'Lobster-Regular',
     textShadowColor: 'black',
     textShadowOffset: {width: -2, height: 0},
     textShadowRadius: 5,

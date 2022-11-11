@@ -1,10 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-
+import React, {useContext} from 'react';
+import {AuthContext, AuthProvider} from '../navigation/AuthProvider';
+import CustomButton from '../components/CustomButton/CustomButton';
 const SupportPage = () => {
+  const {logout} = useContext(AuthContext);
   return (
     <View style={styles.root}  >
+
       <Text style={styles.text}>Support page</Text>
+      <CustomButton text={'Log out'} onPress={() => logout()}></CustomButton>
     </View>
   )
 }
