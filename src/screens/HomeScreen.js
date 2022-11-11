@@ -142,16 +142,14 @@ const HomeScreen = () => {
 
         <View>
           <View style={styles.bioDataContainer}>
-            <Text style={styles.bioData}> Bio-Data </Text>
-            <Text style={styles.idNumber}>
-              {item.id < 10 ? `#0${item.id}` : `#{item.id}`}
-            </Text>
+            <Text style={styles.bioData}> {item.title} </Text>
+            
           </View>
 
           <View style={styles.mainContain}>
-            <Text style={styles.myName}> Name: {item.title} </Text>
-            <Text style={styles.myName}> email {item.cookingMinutes} </Text>
-            <Text style={styles.myName}> mobile: {item.mobile} </Text>
+            <Text style={styles.myName}> health score: {item.healthScore} </Text>
+            <Text style={styles.myName}> Readu in minutes: {item.readyInMinutes} </Text>
+            <Text style={styles.myName}> Price per serving: {item.pricePerServing} </Text>
           </View>
         </View>
       </View>
@@ -160,7 +158,7 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.root}>
-      <Text style={styles.mainHeader}>Sample Api</Text>
+      <Text style={styles.mainHeader}>Explore New Dishes</Text>
       <FlatList
         keyExtractor={item => item.id}
         data={myData}
@@ -204,17 +202,22 @@ const styles = StyleSheet.create({
     fontFamily: 'JosefinSans_400Regular',
   },
   idNumber: {
+    
     fontSize: 20,
     color: 'rgba(255, 255, 255, 0.5)',
     fontFamily: 'JosefinSans_400Regular',
     paddingRight: 10,
   },
   bioData: {
-    fontSize: 30,
+    paddingLeft:20,
+    alignItems:'center',
+    textAlign:'center',
+    fontSize: 20,
     color: '#fff',
     fontFamily: 'JosefinSans_400Regular',
   },
   mainHeader: {
+    fontFamily: 'Lobster-Regular',
     fontSize: 30,
     color: '#3d8f3e',
     textAlign: 'center',
