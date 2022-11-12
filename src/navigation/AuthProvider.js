@@ -1,8 +1,8 @@
 import React, {useState, createContext} from 'react';
-import auth from '@react-native-firebase/auth';
-import { GoogleSignin } from '@react-native-community/google-signin';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
 export const AuthContext = createContext();
 import { ToastAndroid } from 'react-native';
+import auth from '@react-native-firebase/auth'
 
 export const AuthProvider = ({children, navigation}) => {
   const [user, setUser] = useState(null);
@@ -17,6 +17,7 @@ export const AuthProvider = ({children, navigation}) => {
 
         login: async (email, password) => {
           try {
+            console.log('error log');
             await auth().signInWithEmailAndPassword(email, password);
             setisSignedIn(true);
             ToastAndroid.showWithGravity('Signed in' ,ToastAndroid.SHORT,ToastAndroid.CENTER)
@@ -48,7 +49,10 @@ export const AuthProvider = ({children, navigation}) => {
         googleLogin: async () => {
           try {
             // Get the users ID token
+            
             const { idToken } = await GoogleSignin.signIn();
+            
+
 
             // Create a Google credential with the token
             const googleCredential = auth.GoogleAuthProvider.credential(idToken);

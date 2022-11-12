@@ -1,5 +1,5 @@
-import {View, Text,useEffect} from 'react-native';
-import React from 'react';
+import {View, Text} from 'react-native';
+import React,{useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SignInScreen from '../screens/SignInScreen';
@@ -10,12 +10,13 @@ import {GoogleSignin} from '@react-native-google-signin/google-signin';
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
-  // useEffect(() => {
-  //   GoogleSignin.configure({
-  //     webClientId:
-  //       '645032777616-fsutikabs1u5evsnfko6tg5qt8uabo57.apps.googleusercontent.com',
-  //   });
-  // }, []);
+  useEffect(() => {
+    GoogleSignin.configure({
+      webClientId:
+        '645032777616-fsutikabs1u5evsnfko6tg5qt8uabo57.apps.googleusercontent.com',
+    });
+  }, [])
+  
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="sign in" component={SignInScreen} />

@@ -237,7 +237,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 5,
   },
   myName: {
-    fontSize: 14,
+    fontSize: 15,
     color: '#fff',
     marginBottom: 10,
     alignSelf: 'flex-start',
