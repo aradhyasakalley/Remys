@@ -104,6 +104,7 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: 'bold',
     color: '#33792a',
+    fontFamily: 'Lobster-Regular'
   },
 
   text_SECONDARY: {

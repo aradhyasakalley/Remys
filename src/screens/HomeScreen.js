@@ -158,7 +158,7 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.root}>
-      <Text style={styles.mainHeader}>Explore New Dishes</Text>
+      <Text style={styles.mainHeader}>Explore New Recipes</Text>
       <FlatList
         keyExtractor={item => item.id}
         data={myData}
@@ -217,7 +217,11 @@ const styles = StyleSheet.create({
     fontFamily: 'JosefinSans_400Regular',
   },
   mainHeader: {
-    fontFamily: 'Lobster-Regular',
+    fontFamily: 'Ultra-Regular',
+    fontWeight:'bold',
+    textShadowColor: '#2e6b2f',
+    textShadowOffset: {width: -1, height: 0},
+    textShadowRadius: 5,
     fontSize: 30,
     color: '#3d8f3e',
     textAlign: 'center',
@@ -225,6 +229,7 @@ const styles = StyleSheet.create({
   },
   imgContainer: {
     padding: 10,
+    borderRadius:10
   },
   imgStyle: {
     width: '100%',

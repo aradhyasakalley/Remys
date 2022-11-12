@@ -8,6 +8,10 @@
     {
       "path": "assets/fonts/Pacifico-Regular.ttf",
       "sha1": "baca1fca7fe74b61cb33aa0da48ec1a3a77bcf49"
+    },
+    {
+      "path": "assets/fonts/Ultra-Regular.ttf",
+      "sha1": "50d3f9625efc43d483764172981f95253a7db40d"
     }
   ]
 }

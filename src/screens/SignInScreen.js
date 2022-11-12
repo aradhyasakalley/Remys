@@ -102,7 +102,7 @@ const SignInScreen = () => {
 
         <Text style={styles.text2}>
           Dont have an account?{' '}
-          <Text style={styles.link} onPress={onCreateNewPressed}>
+          <Text style={styles.link_new} onPress={onCreateNewPressed}>
             Create one
           </Text>{' '}
         </Text>
@@ -143,18 +143,24 @@ const styles = StyleSheet.create({
     color: '#315e26',
   },
   text: {
-    color: '#021717',
+    color: '#66c559',
     marginVertical: 10,
     textAlign: 'center',
     fontSize: 40,
     fontFamily: 'Lobster-Regular',
-    textShadowColor: '#145236',
-    textShadowOffset: {width: -2, height: 0},
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 0},
     textShadowRadius: 5,
 
     // fontWeight: '600',
   },
   link: {
+    color: 'black',
+
+    textAlign: 'center',
+    fontWeight: '800',
+  },
+  link_new: {
     color: '#66c559',
 
     textAlign: 'center',

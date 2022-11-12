@@ -53,7 +53,7 @@ const SignUpScreen = () => {
     <ScrollView style={styles.root}>
       <View style={styles.root}>
         <Text style={styles.text2}>
-          Create a New <Text style={styles.link2}>Account</Text>{' '}
+          Create a new <Text style={styles.link2}>account</Text>{' '}
         </Text>
        
         {/* <Image style={styles.logo} source={Logo} resizeMode={'contain'} /> */}
@@ -198,7 +198,9 @@ const styles = StyleSheet.create({
     
   },
   link: {
-    color: '#2fa027',
+    color: '#66c559',
+    fontWeight: 'bold',
+    fontSize:15
   },
   image: {
     flex: 1,
