@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 40,
     fontFamily: 'Lobster-Regular',
-    textShadowColor: 'black',
+    textShadowColor: 'grey',
     textShadowOffset: {width: 1, height: 0},
     textShadowRadius: 5,
 
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     color: 'black',
 
     textAlign: 'center',
-    fontWeight: '800',
+    fontWeight: '900',
   },
   link_new: {
     color: '#66c559',

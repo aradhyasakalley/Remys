@@ -25,7 +25,7 @@ const BottomTab = () => {
           } else if (route.name === 'Faviorates') {
             iconName = focused ? 'heart' : 'heart-outline';
           } else if (route.name === 'Support') {
-            iconName = focused ? 'settings' : 'settings-outline';
+            iconName = focused ? 'search' : 'search-outline';
           }
 
           // You can return any component that you like here!
@@ -39,8 +39,9 @@ const BottomTab = () => {
       })}>
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Cuisines" component={CuisinePage} />
-      <Tab.Screen name="Faviorates" component={FavioratePage} />
       <Tab.Screen name="Support" component={SupportPage} />
+      <Tab.Screen name="Faviorates" component={FavioratePage} />
+      
     </Tab.Navigator>
   );
 };

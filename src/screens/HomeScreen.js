@@ -96,6 +96,17 @@
 //   // },
 // });
 
+
+
+
+
+
+
+
+
+
+
+
 import {View, Text, FlatList, StyleSheet, Image} from 'react-native';
 import React, {useState, useEffect} from 'react';
 
@@ -148,7 +159,7 @@ const HomeScreen = () => {
 
           <View style={styles.mainContain}>
             <Text style={styles.myName}> health score: {item.healthScore} </Text>
-            <Text style={styles.myName}> Readu in minutes: {item.readyInMinutes} </Text>
+            <Text style={styles.myName}> Ready in minutes: {item.readyInMinutes} </Text>
             <Text style={styles.myName}> Price per serving: {item.pricePerServing} </Text>
           </View>
         </View>

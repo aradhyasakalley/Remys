@@ -1,11 +1,26 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, {useContext} from 'react';
+import {AuthContext, AuthProvider} from '../navigation/AuthProvider';
+import CustomButton from '../components/CustomButton/CustomButton';
 
+// import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import Screen1 from './Screen1';
+import Screen2 from './Screen2';
+// const Tab = createMaterialTopTabNavigator();
 const FavioratePage = () => {
+  const {logout} = useContext(AuthContext);
+  
   return (
     <View style={styles.root}  >
-      <Text style = {styles.text} >favorites page</Text>
+
+      <Text style={styles.text}>Faviorate page</Text>
+      <CustomButton text={'Log out'} onPress={() => logout()}></CustomButton>
+      
     </View>
+    // <Tab.Navigator>
+    //   <Tab.Screen name="Home" component={Screen1} />
+    //   <Tab.Screen name="Settings" component={Screen2} />
+    // </Tab.Navigator>
   )
 }
 
@@ -22,7 +37,6 @@ const styles = StyleSheet.create({
     backgroundColor:'#FDFDFF',
     padding:20,
   },
-
 })
 
 
