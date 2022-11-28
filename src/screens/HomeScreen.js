@@ -201,6 +201,7 @@ const styles = StyleSheet.create({
     elevation: 6,
     shadowRadius: 15,
     shadowOffset: {width: 1, height: 13},
+    
   },
   bioDataContainer: {
     width: '100%',
@@ -251,6 +252,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#2e6b2f',
     borderBottomLeftRadius: 5,
     borderBottomRightRadius: 5,
+    
   },
   myName: {
     fontSize: 15,

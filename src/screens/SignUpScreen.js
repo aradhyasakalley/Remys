@@ -25,8 +25,7 @@ const SignUpScreen = () => {
   const {register} = useContext(AuthContext);
   const height = {useWindowDimensions};
   const navigation = useNavigation();
-  // const [email,setEmail] = useState('');
-  // const [password,setPassword] = useState('');
+ 
   const {
     control,
     handleSubmit,
@@ -56,7 +55,7 @@ const SignUpScreen = () => {
           Create a new <Text style={styles.link2}>account</Text>{' '}
         </Text>
        
-        {/* <Image style={styles.logo} source={Logo} resizeMode={'contain'} /> */}
+        
         <CustomInput
           name="email"
           placeholder="Email"
@@ -143,11 +142,7 @@ const SignUpScreen = () => {
         </Text>
 
 
-        {/* <CustomButton
-          text={'Already have an account? Login.'}
-          onPress={onHaveAccPressed}
-          type="TERTIARY"
-        /> */}
+        
       </View>
     </ScrollView>
   );
@@ -155,35 +150,7 @@ const SignUpScreen = () => {
 
 export default SignUpScreen;
 
-// const styles = StyleSheet.create({
-//   root: {
-//     backgroundColor:'#acd1af',
-//     alignContent:'center',
-//     padding: 35,
-//   },
-//   logo: {
-//     alignContent:'center',
-//     width: '80%',
-//     maxWidth: 900,
-//     height: 300,
-//     width: 800,
-//     paddingBottom: 100,
-//   },
-//   text: {
-//     fontWeight: 'bold',
-//     fontSize: 40,
-//     textAlign:'center',
 
-//     color: '#97cf8a',
-//   },
-//   text_new: {
-//     fontWeight: 'bold',
-//     fontSize: 45,
-//     alignItems: 'center',
-
-//     color: '#315e26',
-//   },
-// });
 
 const styles = StyleSheet.create({
   root: {

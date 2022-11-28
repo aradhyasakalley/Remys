@@ -72,6 +72,7 @@ const SupportPage = () => {
   } = useForm();
   const [isLoaded, setIsLoaded] = useState(true);
   const [searchQuery, setsearchQuery] = useState([]);
+  
 
   useEffect(() => {
     getSearchData();
@@ -95,7 +96,7 @@ const SupportPage = () => {
         console.log(data);
         console.log(Object.keys(data.recipes[0])); 
         setIsLoaded(false);
-        setsearchQuery(data.recipes);
+        setsearchQuery('pasta');
       })
       .catch(err => {
         console.log(err);
