@@ -112,7 +112,7 @@ import React, {useState, useEffect} from 'react';
 
 const HomeScreen = () => {
   const [isLoaded, setIsLoaded] = useState(true);
-  const [myData, setMyData] = useState([]);
+  const [myData, setMyData] = useState();
 
   useEffect(() => {
     getRecipeData();

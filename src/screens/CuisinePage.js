@@ -1,15 +1,35 @@
 import {FlatList, StyleSheet, Text, View} from 'react-native';
 import React, {useState,useEffect} from 'react';
 
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Screen1 from './Screen1';
 
+import Italian from './Italian';
+import French from './French';
+import Indian from './Indian';
+import Japanese from './Japanese';
+import Chinese from './Chinese';
+
+
+const Stack = createNativeStackNavigator();
 const CuisinePage = () => {
 
 
   return (
-    <View style={styles.root}>
-      <Text style={styles.text}> Cuisines Page</Text>
+    <Stack.Navigator
+    screenOptions={{
+      headerShown: false
+    }}
+    >
+      <Stack.Screen name="screen1" component={Screen1} />
+      <Stack.Screen name="italian" component={Italian} />
+      <Stack.Screen name="french" component={French} />
+      <Stack.Screen name="japanese" component={Japanese} />
+      <Stack.Screen name="indian" component={Indian} />
+      <Stack.Screen name="chinese" component={Chinese} />
+
       
-    </View>
+    </Stack.Navigator>
   );
 };
 
