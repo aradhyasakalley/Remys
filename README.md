@@ -4,7 +4,7 @@
  
   <table>
   <tr>
-    <td>Sign In Screen/td>
+    <td>Sign In Screen</td>
     <td>Sign Up Screen</td>
     <td>Cuisines Page</td>
   </tr>
