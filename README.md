@@ -21,9 +21,9 @@
     <td>French Cuisine</td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/102210237/210969010-1575d5e3-d225-481a-9057-3eae9c52098a.png" width=400 height=600></td>
-    <td><img src="https://user-images.githubusercontent.com/102210237/210969030-79554bb4-5f8a-41ea-9b7a-5816c4827ae2.png" width=400 height=600></td>
-    <td><img src="https://user-images.githubusercontent.com/102210237/210969042-6d6a303c-0056-4f79-9d04-b492adc46b4b.png" width=400 height=600></td>
+    <td><img src="https://user-images.githubusercontent.com/102210237/210969010-1575d5e3-d225-481a-9057-3eae9c52098a.png" width=400 height=550></td>
+    <td><img src="https://user-images.githubusercontent.com/102210237/210969030-79554bb4-5f8a-41ea-9b7a-5816c4827ae2.png" width=400 height=550></td>
+    <td><img src="https://user-images.githubusercontent.com/102210237/210969042-6d6a303c-0056-4f79-9d04-b492adc46b4b.png" width=400 height=550></td>
   </tr>
  </table>
 
