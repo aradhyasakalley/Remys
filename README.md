@@ -45,13 +45,26 @@
   </tr>
  </table>
 
+ <table>
+  <tr>
+    <td>Chinese Cuisine</td>
+    <td>Indian Cuisine</td>
+    <td>Japanese Cuisine</td>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/102210237/236216251-605ea2f3-74b7-4a92-8c85-2083c75efc7e.png" width=400 height=550></td>
+    <td><img src="https://user-images.githubusercontent.com/102210237/236216280-2730c4c3-451c-46e2-8fdf-db2a5c9baeb2.png" width=400 height=550></td>
+    <td><img src="https://user-images.githubusercontent.com/102210237/236216258-7ee30778-1b68-4775-b7a9-76844a21aa6e.png" width=400 height=550></td>
+  </tr>
+ </table>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
- 
- 
- 
- 
- 
- 
- 
+
 
  
