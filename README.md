@@ -1,4 +1,4 @@
-# recipe-app
+# Remy's
 # Recipe App made using React-Native
  
  
